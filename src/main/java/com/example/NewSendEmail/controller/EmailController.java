@@ -28,7 +28,7 @@ public class EmailController {
         return "test";
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*")
     @PostMapping(value = "/sendEmail", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> sendMailWithAttachment(@RequestParam(value = "file") MultipartFile file,@RequestParam String customerInfo)  {
         if (null == file.getOriginalFilename() || null == customerInfo) {
