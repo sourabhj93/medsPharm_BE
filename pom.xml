@@ -15,7 +15,7 @@
 	<name>NewSendEmail</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 		<solace-spring-boot.version>1.2.1</solace-spring-boot.version>
 	</properties>
 	<dependencies>
