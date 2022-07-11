@@ -24,7 +24,7 @@ public class EmailService implements EmailServiceInterface {
     @Autowired
     EmailDetails emailDetails;
     public void sendEmailWithAttachment(CustomerInfoDTO customerInfo, Path path) {
-        String message = "Hey Pharmcarer,\n\n you have 1 order to deliver!!\n\n For Prescriptions, Please find attached pdf.\n\nHere are the details of Customer :\n\nCustomer Name : " + customerInfo.getCustomerName() + "\nCustomer Contact Number : " + customerInfo.getMobileNumber() + "\nCustomer Address : " + customerInfo.getAddress();
+        String message = "Hey Pharmcarer,\n\n you have 1 order to deliver!!\n\n For Prescriptions, Please find attached pdf.\n\nHere are the details of Customer :\n\nCustomer Name : " + customerInfo.getCustomerName() + "\nCustomer Contact Number : " + customerInfo.getMobileNumber() + "\nCustomer Address : " + customerInfo.getAddress() +  "\nDescription : " + customerInfo.getDescription();
         String subject = "Welcome To PharmCare - Details of Customer :" + customerInfo.getCustomerName();
 
         Session session = commonUtil.getSession();
